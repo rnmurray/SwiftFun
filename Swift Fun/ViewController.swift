@@ -23,6 +23,9 @@ class ViewController: UIViewController {
     //add button action
     @IBAction func buttonTapped(_ sender: Any) {
         
+        let sum = Double(topTextField.text!)! + Double(bottomTextField.text!)!
+        
+        myLabel.text = "\(topTextField.text!) + \(bottomTextField.text!) = \(sum)"
         
     }
     
@@ -30,7 +33,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        myLabel.textColor = UIColor.green
+        myLabel.textColor = UIColor.blue
         myLabel.text = "Robyn is Awesome"
     }
 
