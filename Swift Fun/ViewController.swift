@@ -15,17 +15,34 @@ class ViewController: UIViewController {
     // add label outlet
     @IBOutlet weak var myLabel: UILabel!
     
+    // add switch outlet to handle math functions
+    @IBOutlet weak var additionSwitch: UISwitch!
+    
     // add text field 1
     @IBOutlet weak var topTextField: UITextField!
     
     // add text field 2
     @IBOutlet weak var bottomTextField: UITextField!
+    
     //add button action
     @IBAction func buttonTapped(_ sender: Any) {
         
-        let sum = Double(topTextField.text!)! + Double(bottomTextField.text!)!
+        let addition = additionSwitch.isOn
         
-        myLabel.text = "\(topTextField.text!) + \(bottomTextField.text!) = \(sum)"
+        // handles both add and subtract cases
+        if addition {
+            let sum = Double(topTextField.text!)! + Double(bottomTextField.text!)!
+            
+            myLabel.text = "\(topTextField.text!) + \(bottomTextField.text!) = \(sum)"
+            
+        }
+        else {
+            
+            let sum = Double(topTextField.text!)! - Double(bottomTextField.text!)!
+            
+            myLabel.text = "\(topTextField.text!) - \(bottomTextField.text!) = \(sum)"
+            
+        }
         
     }
     

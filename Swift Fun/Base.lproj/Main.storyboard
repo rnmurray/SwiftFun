@@ -48,11 +48,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iRT-ay-rFb">
+                                <rect key="frame" x="163" y="132.5" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zYg-bk-gyP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="99f-sH-PQ3"/>
+                            <constraint firstItem="3uR-O7-wPr" firstAttribute="top" secondItem="iRT-ay-rFb" secondAttribute="bottom" constant="20" id="IcI-Fa-lmU"/>
                             <constraint firstItem="3uR-O7-wPr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M4j-Zx-c4b"/>
+                            <constraint firstItem="iRT-ay-rFb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cDT-LL-ZId"/>
                             <constraint firstItem="Er5-mE-sXM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hDs-Me-grS"/>
                             <constraint firstItem="Er5-mE-sXM" firstAttribute="top" secondItem="2u4-Za-dUo" secondAttribute="bottom" constant="30" id="mLB-t2-E0L"/>
                             <constraint firstItem="Er5-mE-sXM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pop-Qi-QIM"/>
@@ -63,6 +68,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="additionSwitch" destination="iRT-ay-rFb" id="aw3-Vk-VBa"/>
                         <outlet property="bottomTextField" destination="2u4-Za-dUo" id="yem-oZ-3J9"/>
                         <outlet property="myLabel" destination="Er5-mE-sXM" id="hfe-f5-FVH"/>
                         <outlet property="topTextField" destination="3uR-O7-wPr" id="bXE-2e-KIG"/>
